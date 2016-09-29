@@ -60,6 +60,15 @@ class Countries extends Model {
         $countries = $this->getCountries();
 		return $countries[$id];
 	}
+	
+	/**
+	 * Returns countries by filter
+	 * @return Collection
+	 */
+	public function filterByField($field, $value)
+	{
+	    return $this->where($field, $value)->get(); 
+	}
 
 	/**
 	 * Returns a list of countries
