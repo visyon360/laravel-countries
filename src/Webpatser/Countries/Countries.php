@@ -63,6 +63,10 @@ class Countries extends Model {
 	
 	/**
 	 * Returns countries by filter
+	 * 
+	 * @param string $field : The name of the field
+	 * @value string/int : The value of the field
+	 * 
 	 * @return Collection
 	 */
 	public function filterByField($field, $value)
